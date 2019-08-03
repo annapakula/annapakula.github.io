@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
 
 
 html {
@@ -11,6 +12,155 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  font-family: Poppins, monospace, Arial;
+  color: #171F3F;
 }
+h1, h2, h3 {
+  margin: 0;
+}
+
+.main {
+
+  background: linear-gradient(180deg, $aquamarine-dark 0%, $brown 100%);
+  position: relative;
+  z-index: -2;
+  display: grid;
+  grid-template-areas:
+    "about"
+    "skills"
+    "projects";
+  
+
+}
+
+.about {
+  grid-area: about;
+  color: #FFF;
+  max-width: 1440px;
+  width: 100%;
+  
+  &__background-photo {
+    position: absolute;
+    z-index: -1;
+    margin: 1rem auto;
+    left: 0;
+    right: 0;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 110px auto 0 128px;
+    max-width: 681px;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 36px;
+  }
+  &__header {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 56px;
+    max-width: 781px;
+    margin-bottom: 3rem;
+  }
+  &__email {
+    &>a {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    color: $aquamarine-light;
+    text-decoration: none;
+    }
+  }
+  &__person {
+    max-width: 121px;
+    width:100%;
+    max-height: 121px;
+    height:100%;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+  }
+  &__description {
+    margin-bottom: 3rem;
+  }
+  &__to-id {
+
+  }
+}
+
+.contact {
+  background: $brown;
+  color: #FFF;
+  &__header {
+  }
+  &__paragraph {
+
+  }
+  &__github-icon {
+
+  }
+  &__email {
+    color: $aquamarine-light;
+  }
+}
+
+
+.projects {
+  grid-area: projects;
+  background: #F5F7FA;
+  &__header {
+
+  }
+  &__about {
+
+  }
+}
+
+// skills
+.skills {
+  grid-area: skills;
+  background: #FFF;
+  &__header {
+
+  }
+}
+
+.know-something-about {
+
+  &__header {
+
+  
+  }
+  &__list {
+
+    &-item {
+
+    }
+  }
+}
+.want-to-learn {
+
+  &__header {
+
+  }
+  &__list {
+
+    &-item {
+
+    }
+  }
+}
+
+.working-knowledge {
+
+  &__header {
+
+  }
+  &__list {
+
+    &-item {
+
+    }
+  }
+}
+
