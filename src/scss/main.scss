@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,500,600&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
 
 
@@ -22,17 +23,15 @@ h1, h2, h3 {
 .main {
   padding: 1rem;
   background: $brown;
-  // background: $brown;
-
-  position: relative;
   display: grid;
   grid-template-areas:
     "about"
     "skills"
     "projects";
-  
-
+  position: relative;
 }
+
+
 
 .about {
   grid-area: about;
@@ -40,7 +39,7 @@ h1, h2, h3 {
   color: #FFF;
   max-width: 1440px;
   width: 100%;
-  height: fit-content;
+  // height: fit-content;
   &__background-photo {
     position: absolute;
     background-image: initial;
@@ -60,6 +59,7 @@ h1, h2, h3 {
     line-height: 36px;
   }
   &__header {
+    font-family: Raleway, monospace, Arial;
     font-weight: 600;
     font-size: 2rem;
     line-height: 56px;
@@ -72,14 +72,14 @@ h1, h2, h3 {
     font-weight: 500;
     font-size: 22px;
     line-height: 32px;
-    color: $aquamarine-light;
+    color: $aquamarine-dark;
     text-decoration: none;
     position: relative;
     &::after {
       content: " ";
       width: -webkit-fill-available;
       height: 2px;
-      background-color: $aquamarine-light;
+      background-color: $aquamarine-dark;
       position: absolute;
       left: 0;
       bottom: -.5rem;
@@ -113,12 +113,12 @@ h1, h2, h3 {
       height: 100%;
     }
   }
-  
+
   &__description {
     margin-bottom: 3rem;
   }
   &__to-id {
-    color: $aquamarine-light;
+    color: $aquamarine-dark;
   }
 }
 
@@ -139,6 +139,37 @@ h1, h2, h3 {
 }
 
 
+.navigation {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 74px;
+  background: rgba(63, 40, 23, 0.87);
+  z-index: 2;
+  
+  &__list {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1187px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    min-width: 174px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+
 .projects {
   grid-area: projects;
   background: #F5F7FA;
@@ -150,6 +181,7 @@ h1, h2, h3 {
   }
 }
 
+
 // skills
 .skills {
   grid-area: skills;
@@ -158,7 +190,6 @@ h1, h2, h3 {
 
   }
 }
-
 .know-something-about {
 
   &__header {
@@ -184,7 +215,6 @@ h1, h2, h3 {
     }
   }
 }
-
 .working-knowledge {
 
   &__header {
