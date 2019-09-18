@@ -20,8 +20,8 @@ h1, h2, h3 {
 }
 
 .main {
-
-  background: linear-gradient(180deg, $aquamarine-dark 0%, $brown 100%);
+  padding: 1rem;
+  background: $brown;
   // background: $brown;
 
   position: relative;
@@ -36,7 +36,7 @@ h1, h2, h3 {
 
 .about {
   grid-area: about;
-  padding: 102px;
+  padding: 85px;
   color: #FFF;
   max-width: 1440px;
   width: 100%;
@@ -87,27 +87,33 @@ h1, h2, h3 {
     }
   }
   &__person {
-    // padding: .5rem;
+    max-height: 153px;
+    height: 100%;
     margin-bottom: 2rem;
     position: relative;
-
-
     &-img {
-      border: 7px solid #362D28;
+      border: 1rem solid #FFF;
       border-radius: 50%;
+      position: relative;   
     }
-    &::before {
+    &::after {
       content: " ";
-      border: 7px solid #FFF;
-      border-radius: 100px;
       position: absolute;
-      outline-offset: 20px;
-      max-width: 135px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      border: 8px solid $brown;
+      box-sizing: content-box;
+      border-radius: 50%;
+      max-width: 121px;
       width: 100%;
-      max-height: 135px;
+      max-height: 121px;
       height: 100%;
     }
   }
+  
   &__description {
     margin-bottom: 3rem;
   }
