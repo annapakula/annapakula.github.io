@@ -1,0 +1,230 @@
+@import "_normalize";
+@import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,500,600&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Poppins, monospace, Arial;
+  color: #171F3F;
+}
+h1, h2, h3 {
+  margin: 0;
+}
+
+.main {
+  padding: 1rem;
+  background: $brown;
+  display: grid;
+  grid-template-areas:
+    "about"
+    "skills"
+    "projects";
+  position: relative;
+}
+
+
+
+.about {
+  grid-area: about;
+  padding: 85px;
+  color: #FFF;
+  max-width: 1440px;
+  width: 100%;
+  // height: fit-content;
+  &__background-photo {
+    position: absolute;
+    background-image: initial;
+    margin: 1rem auto;
+    left: 0;
+    right: 0;
+
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto 0 128px;
+    max-width: 681px;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 36px;
+  }
+  &__header {
+    font-family: Raleway, monospace, Arial;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 56px;
+    max-width: 781px;
+    margin-bottom: 3rem;
+  }
+  &__email {
+    margin: 0;
+    &>a {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    color: $aquamarine-dark;
+    text-decoration: none;
+    position: relative;
+    &::after {
+      content: " ";
+      width: -webkit-fill-available;
+      height: 2px;
+      background-color: $aquamarine-dark;
+      position: absolute;
+      left: 0;
+      bottom: -.5rem;
+    }
+    }
+  }
+  &__person {
+    max-height: 153px;
+    height: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+    &-img {
+      border: 1rem solid #FFF;
+      border-radius: 50%;
+      position: relative;   
+    }
+    &::after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      border: 8px solid $brown;
+      box-sizing: content-box;
+      border-radius: 50%;
+      max-width: 121px;
+      width: 100%;
+      max-height: 121px;
+      height: 100%;
+    }
+  }
+
+  &__description {
+    margin-bottom: 3rem;
+  }
+  &__to-id {
+    color: $aquamarine-dark;
+  }
+}
+
+.contact {
+  background: $brown;
+  color: #FFF;
+  &__header {
+  }
+  &__paragraph {
+
+  }
+  &__github-icon {
+
+  }
+  &__email {
+    color: $aquamarine-light;
+  }
+}
+
+
+.navigation {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 74px;
+  background: rgba(63, 40, 23, 0.87);
+  z-index: 2;
+  
+  &__list {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1187px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    min-width: 174px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+
+.projects {
+  grid-area: projects;
+  background: #F5F7FA;
+  &__header {
+
+  }
+  &__about {
+
+  }
+}
+
+
+// skills
+.skills {
+  grid-area: skills;
+  background: #FFF;
+  &__header {
+
+  }
+}
+.know-something-about {
+
+  &__header {
+
+  
+  }
+  &__list {
+
+    &-item {
+
+    }
+  }
+}
+.want-to-learn {
+
+  &__header {
+
+  }
+  &__list {
+
+    &-item {
+
+    }
+  }
+}
+.working-knowledge {
+
+  &__header {
+
+  }
+  &__list {
+
+    &-item {
+
+    }
+  }
+}
+
