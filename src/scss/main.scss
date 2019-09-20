@@ -26,7 +26,8 @@ h1, h2, h3 {
   grid-template-areas:
     "about"
     "skills"
-    "projects";
+    "projects"
+    "contact";
 }
 
 
@@ -40,11 +41,12 @@ h1, h2, h3 {
   width: 100%;
   height: 100vh;
   padding: 126px;
+  padding-top: 148px;
   &::after {
     content: "";
     width: 100%;
     height: 100%;
-    background: rgba(63, 40, 23, 0.3);
+    background: #42302280;
     position: absolute;
     left: 0;
     top: 0;
@@ -55,7 +57,6 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 780px;
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 2.25rem;;
@@ -77,29 +78,27 @@ h1, h2, h3 {
     }
   }
   &__email {
-    position: relative;
-    margin: 0;
-    &>a {
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 32px;
+    font-weight: 300;
+    font-size: 1.375rem;
+    line-height: 2rem;
     color: $green;
     text-decoration: none;
+    position: relative;
+    margin: 0;
       &::after {
         position: absolute;
         content: " ";
-        width: -webkit-fill-available;
-        height: 2px;
+        width: 100%;
+        height: 1.5px;
         background-color: $green;
         left: 0;
         bottom: -.5rem;
       }
-    }
   }
   &__person {
     max-height: 153px;
     height: 100%;
-    margin-bottom: 16px;
+    margin-bottom: .5rem;
     position: relative;
     &-img {
       border: 10px solid #FFF;
@@ -123,7 +122,8 @@ h1, h2, h3 {
   }
 
   &__description {
-    margin: 16px 0 48px;
+    margin: 1rem 0 2rem;
+    max-width: 50%;
     &--bigger {
       font-size: 2rem;
       margin: 50px 0 0;
@@ -135,18 +135,61 @@ h1, h2, h3 {
 /* CONTACT */
 
 .contact {
+  grid-area: contact;
   background: $brown;
   color: #FFF;
+  padding: 126px;
   &__header {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    margin-bottom: 1rem;
+    position: relative;
+    &::before {
+      content: "";
+      width: 80px;
+      height: 4px;
+      top: -24px;
+      background: $green;
+      border-radius: 8px;
+      position: absolute;
+    }
   }
   &__paragraph {
-
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    max-width: 50%;
+    margin-bottom: 24px;
   }
-  &__github-icon {
-
+  &__icons {
+    margin-bottom: 48px;
+    &--github {
+      width: 32px;
+      height: 32px;
+      margin-right: 16px;
+    }
+    &--linkedin {
+      width: 32px;
+      height: 32px;
+    }
   }
   &__email {
-    color: $green;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 32px;
+      color: $green;
+      text-decoration: none;
+      position: relative;
+        &::after {
+          position: absolute;
+          content: " ";
+          width: 100%;
+          height: 1.5px;
+          background-color: $green;
+          left: 0;
+          bottom: -.5rem;
+     }
   }
 }
 
@@ -158,7 +201,7 @@ h1, h2, h3 {
   left: 0;
   top: 0;
   height: 74px;
-  background: rgba(63, 40, 23, 0.87);
+  background: rgba(54, 45, 40, 0.932);
   z-index: 2;
   &__list {
     padding: 0;
@@ -188,12 +231,20 @@ h1, h2, h3 {
   grid-area: projects;
   background: #F5F7FA;
   margin: 0 16px;
+  padding: 110px;
 
   &__header {
-
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
   }
   &__about {
-
+    max-width: 50%;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    color: $darkGrey;
   }
 }
 
@@ -258,6 +309,7 @@ h1, h2, h3 {
     line-height: 2.5rem;
     padding-left: 21px;
     position: relative;
+    color: $darkGrey;
     &::before {
       content: url("../assets/img/check-circle.svg");
       width: 18px;
