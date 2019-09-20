@@ -162,6 +162,9 @@ h1, h2, h3 {
     max-width: 50%;
     margin-bottom: 24px;
   }
+  &__link {
+    text-decoration: none;
+  }
   &__icons {
     margin-bottom: 48px;
     &--github {
@@ -198,30 +201,47 @@ h1, h2, h3 {
 .navigation {
   position: fixed;
   width: 100vw;
-  left: 0;
-  top: 0;
   height: 74px;
   background: rgba(54, 45, 40, 0.932);
   z-index: 2;
+  &__link {
+    text-decoration: none;
+    color: #FFF;
+  }
   &__list {
-    padding: 0;
     margin: 0 auto;
-    max-width: 1187px;
+    padding: 0 110px;
     width: 100%;
     height: 100%;
     list-style: none;
-    color: #FFF;
     display: flex;
-    justify-content: space-around;
-    // justify-content: space-between;
+    // justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
   &__item {
     min-width: 174px;
     text-align: center;
     font-weight: 300;
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 1.375rem;
+    line-height: 2rem;
+    position: relative;
+    &:hover::before {
+      content: "";
+      width: 1px;
+      height: 100%;
+      left: 0;
+      background: #FFF;
+      position: absolute;
+    }
+    &:hover::after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      right: 0;
+      background: #FFF;
+      position: absolute;
+    }
   }
 }
 
