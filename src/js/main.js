@@ -1,19 +1,36 @@
 "use strict";
 
-const projectsList = document.querySelector(".projects__repos--js");
+const projectsList = document.querySelector(".repos--js");
 
-fetch("https://api.github.com/users/annamazurek/repos")
+fetch("https://api.github.com/users/annamazurek/repos?sort=created")
   .then(response => response.json())
   .then(response => {
     const repositories = response;
     for(const repo of repositories){
-      projectsList.innerHTML += `<li class="projects__item"><a class="projects__link" href="${repo.html_url}">
-        ${repo.name} <br>
-        ${repo.description}
-      </a></li>`
+      if(repo.homepage == ""){
+        projectsList.innerHTML += `
+        <li class="repos__item--js">
+        <h3 class="repos__title--js">${repo.name}</h3> 
+        <br>
+        <p class="repos__description--js">${repo.description}</p>
+        <div class="repos__links--js">
+          <a class="repos__link--github repos__link--js" href="${repo.html_url}">GitHub</a>
+        </div>
+      </li>`;
+    } else {
+      projectsList.innerHTML += `
+        <li class="repos__item--js">
+          <h3 class="repos__title--js">${repo.name}</h3> 
+          <br>
+          <p class="repos__description--js">${repo.description}</p>
+          <div class="repos__links--js">
+            <a class="repos__link--demo repos__link--js" href="${repo.homepage}">Demo</a>
+            <a class="repos__link--github repos__link--js" href="${repo.html_url}">GitHub</a>
+          </div>
+        </li>`;
     }
-    console.log(response);
-  })
+  }
+})
   // .catch(error);
   
 
