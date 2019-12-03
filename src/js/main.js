@@ -32,14 +32,6 @@ fetch("https://api.github.com/users/annamazurek/repos?sort=created")
   }
 })
   // .catch(error);
-  
-
-
-
-
-
-
-
 
 
 console.log(`Hello! 
