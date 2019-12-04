@@ -11,7 +11,7 @@
     &__header {
       h1 {
         font-weight: 400;
-        font-size: 3rem;
+        font-size: 2.8rem;
       }
       h2 {
         font-size: 1.5rem;
@@ -41,7 +41,14 @@
       max-width: 100%;
   }}
   .navigation {
-    display: none;
+    height: 45px;
+    &__list {
+      padding: 0 30px;
+    }
+    &__item {
+      min-width: 120px;
+      font-size: 1.1rem;
+    }
   }
   .skills {
     &__container {
@@ -72,7 +79,7 @@
 
 @media (max-width: 618px) {
   .about {
-    padding-top: 30px;
+    padding: 30px;
     &__content {
       align-items: center;
     }
@@ -102,6 +109,9 @@
     &__email {
       font-size: 1.25rem;
   }}
+  .navigation {
+    display: none;
+  }
   .contact {
     &__header {
       font-weight: 400;
@@ -186,7 +196,7 @@
 
 @media (max-width: 440px) {
   .about {
-    padding-top: 20px;
+    padding: 20px 8px;
     &__header {
       line-height: 1.8rem;
       h1 {
@@ -200,92 +210,75 @@
       font-size: 1.05rem;
     }
   }
+  .contact {
+    padding: 30px 10px;
+    &__header {
+      font-weight: 400;
+      font-size: 1.7rem;
+      line-height: 2.25rem;
+      &::before {
+        width: 50px;
+        height: 3.5px;
+        top: -14px;
+      }
+    }
+    &__paragraph {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      margin-top: 14px;
+    }
+    &__email {
+      font-size: 1.1rem;
+     }
+  }
+  .skills {
+    &__header {
+      font-size: 1.7rem;
+    }
+    &__subheader {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-right: 0;
+    }
+    &__container {
+      padding: 30px 10px;
+      grid-row-gap: 60px;
+    }
+    &__section {
+      padding: 0 20px;
+    }
+  }
+  .projects {
+    padding: 30px 10px;
+    &__header {
+      font-size: 1.7rem;
+    }
+    &__about {
+      font-size: 1.125rem;
+      line-height: 1.7rem;
+    }
+  }
+  .repos {
+    &__item--js {
+      padding: 80px 28px;
+      &::before {
+        top: 22px;
+      }
+    }
+    &__link--js {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+    &__title--js {
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
+    &__description--js {
+      font-size: 1.2rem;
+    }
+
+  }
 }
-//   .contact {
-//     &__header {
-//       font-weight: 400;
-//       font-size: 1.5rem;
-//       line-height: 2rem;
-//       &::before {
-//         width: 50px;
-//       }
-//     }
-//     &__icons {
-//       margin-bottom: 32px;
-//     }
-//     &__email {
-//       font-size: 1.25rem;
-//     }
-//   }
-//   .main {
-//     border: none;
-//   }
-//   .skills {
-//     &__container {
-//       grid-row-gap: 86px;
-//     }
-//     &__header {
-//       font-size: 2rem;
-//       line-height: 2rem;
-//       text-align: center;
-//     }
-//     &__subheader {
-//       font-size: 1.75rem;
-//       &::before {
-//         width: 40px;
-//         top: -8px;
-//       }
-//     }
-//     &__list {
-//       columns: 1;
-//     }
-//     &__item {
-//       line-height: 2.25rem;
-//       padding-left: 32px;
-//       &::before {
-//         left: 0;
-//       }
-//     }
-//   }
-//   .projects {
-//   &__header {
-//     font-size: 2rem;
-//     line-height: 2rem;
-//     text-align: center;
-//   }
-//   &__about {
-//     text-align: center;
-//     line-height: 2rem;
-//     color: $darkGrey;
-//     margin-bottom: 2rem;
-//   }
-// }
-//   .repos {
-//     &__description--js {
-//       font-size: 1.25rem;
-//       line-height: 1.75rem;
-//     }
-//     &__item--js {
-//       padding: 88px 32px;
-//       &::before {
-//         width: 40px;
-//         height: 40px;
-//         top: 32px;
-//       }
-//     }
-//     &__links--js{
-//       padding: 10px 32px;
-//     }
-//     &__title--js {
-//       font-size: 1.25rem;
-//       line-height: 1.75rem;
-//     }
-//   }
-// }
-
-// @media (max-height: ...){
-
-// }
 
 
 @media (max-height: 615px)and(max-width: 305px) {
