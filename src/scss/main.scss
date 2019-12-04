@@ -115,11 +115,11 @@ h1, h2, h3 {
     &::after {
       content: " ";
       position: absolute;
-      left: 4px;
+      left: 2.5px;
       right: 0;
-      top: 4px;
+      top: 3px;
       bottom: 0;
-      border: 6px solid $darkBlue;
+      border: 8px solid $darkBlue;
       box-sizing: content-box;
       border-radius: 50%;
       max-width: 121px;
