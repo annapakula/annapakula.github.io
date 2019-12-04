@@ -327,6 +327,7 @@ h1, h2, h3 {
 .main {
   background: #171F3F;
   border: 16px solid #171F3F;
+  min-width: 300px;
   border-top: none;
   display: -ms-grid;
   display: grid;
@@ -341,12 +342,11 @@ h1, h2, h3 {
   color: #FFF;
   width: 100%;
   height: 100vh;
-  padding: 126px;
-  padding-top: 148px; }
+  padding: 110px 126px 0px; }
   .about::after {
     content: "";
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: #42302280;
     position: absolute;
     left: 0;
@@ -358,6 +358,7 @@ h1, h2, h3 {
     font-size: 1.375rem;
     line-height: 2rem;
     position: relative;
+    height: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -368,9 +369,21 @@ h1, h2, h3 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     z-index: 1; }
+  .about__box-person {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .about__header {
-    position: absolute;
     left: 205px;
     top: 25px;
     font-family: Raleway, monospace, Arial;
@@ -398,8 +411,7 @@ h1, h2, h3 {
       left: 0;
       bottom: -.5rem; }
   .about__person {
-    max-height: 153px;
-    height: 100%;
+    margin-right: 80px;
     margin-bottom: .5rem;
     position: relative; }
     .about__person-img {
@@ -408,11 +420,11 @@ h1, h2, h3 {
     .about__person::after {
       content: " ";
       position: absolute;
-      left: 4px;
+      left: 2.5px;
       right: 0;
-      top: 4px;
+      top: 3px;
       bottom: 0;
-      border: 6px solid #171F3F;
+      border: 8px solid #171F3F;
       -webkit-box-sizing: content-box;
               box-sizing: content-box;
       border-radius: 50%;
@@ -421,11 +433,12 @@ h1, h2, h3 {
       max-height: 121px;
       height: 100%; }
   .about__description {
-    margin: 1rem 0 2rem;
-    max-width: 50%; }
+    margin: 0 0 1rem;
+    max-width: 70%; }
     .about__description--bigger {
       font-size: 2rem;
-      margin: 50px 0 0; }
+      line-height: 3rem;
+      margin: 0; }
 
 /* CONTACT */
 .contact {
@@ -576,8 +589,6 @@ h1, h2, h3 {
     .repos__item--js::before {
       content: url("../assets/img/github-icon-black.svg");
       position: absolute;
-      width: 48px;
-      height: 48px;
       top: 48px; }
   .repos__links--js {
     background: #F5F7FA;
@@ -640,6 +651,7 @@ h1, h2, h3 {
     font-size: 1.25rem;
     line-height: 2.25rem; }
 
+/* SKILLS */
 .skills {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -712,29 +724,23 @@ h1, h2, h3 {
 
 @media (max-width: 964px) {
   .about {
-    padding: 63px;
-    padding-top: 148px; }
-    .about__header {
-      left: 155px;
-      top: 16px; }
-      .about__header h1 {
-        font-weight: 400;
-        font-size: 3rem; }
-      .about__header h2 {
-        font-size: 1.5rem;
-        font-weight: inherit; }
-    .about__person {
-      margin-top: 20px; }
-      .about__person-img {
-        border: 4px solid #FFF;
-        border-radius: 50%;
-        width: 80px; }
-      .about__person::after {
-        left: 3px;
-        top: 3px;
-        border: 4px solid #171F3F;
-        max-width: 66px;
-        max-height: 66px; }
+    padding: 60px 63px 0; }
+    .about__header h1 {
+      font-weight: 400;
+      font-size: 2.8rem; }
+    .about__header h2 {
+      font-size: 1.5rem;
+      font-weight: inherit; }
+    .about__person-img {
+      border: 4px solid #FFF;
+      border-radius: 50%;
+      width: 100px; }
+    .about__person::after {
+      left: 3px;
+      top: 3px;
+      border: 4px solid #171F3F;
+      max-width: 86px;
+      max-height: 86px; }
     .about__description {
       max-width: 100%; }
   .contact {
@@ -742,7 +748,12 @@ h1, h2, h3 {
     .contact__paragraph {
       max-width: 100%; }
   .navigation {
-    display: none; }
+    height: 45px; }
+    .navigation__list {
+      padding: 0 30px; }
+    .navigation__item {
+      min-width: 120px;
+      font-size: 1.1rem; }
   .skills__container {
     padding: 63px; }
   .skills__list {
@@ -769,22 +780,42 @@ h1, h2, h3 {
     grid-template-columns: 1fr; } }
 
 @media (max-width: 618px) {
-  .about__header {
-    left: 105px;
-    top: 16px;
-    line-height: 3rem; }
-    .about__header h1 {
-      font-weight: 400;
-      font-size: 2.5rem; }
-  .about__description {
-    max-width: 100%;
-    margin: .5rem 0 2rem;
-    font-size: 1.25rem; }
-    .about__description--bigger {
-      font-size: 1.5rem;
-      margin: 50px 0; }
-  .about__email {
-    font-size: 1.25rem; }
+  .about {
+    padding: 30px; }
+    .about__content {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .about__box-person {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .about__header {
+      line-height: 2.5rem;
+      text-align: center; }
+      .about__header h1 {
+        font-weight: 400;
+        font-size: 2.5rem; }
+    .about__person {
+      margin-right: 0; }
+    .about__description {
+      margin: 0 0 2rem;
+      font-size: 1.25rem;
+      text-align: center; }
+      .about__description--bigger {
+        font-size: 1.5rem;
+        margin: 20px 0 0; }
+    .about__email {
+      font-size: 1.25rem; }
+  .navigation {
+    display: none; }
   .contact__header {
     font-weight: 400;
     font-size: 1.5rem;
@@ -840,5 +871,79 @@ h1, h2, h3 {
   .repos__title--js {
     font-size: 1.25rem;
     line-height: 1.75rem; } }
+
+@media (max-width: 440px) {
+  .about {
+    padding: 20px 8px; }
+    .about__header {
+      line-height: 1.8rem; }
+      .about__header h1 {
+        font-size: 2rem; }
+      .about__header h2 {
+        font-size: 1.2rem; }
+    .about__email {
+      font-size: 1.05rem; }
+  .contact {
+    padding: 30px 10px; }
+    .contact__header {
+      font-weight: 400;
+      font-size: 1.7rem;
+      line-height: 2.25rem; }
+      .contact__header::before {
+        width: 50px;
+        height: 3.5px;
+        top: -14px; }
+    .contact__paragraph {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      margin-top: 14px; }
+    .contact__email {
+      font-size: 1.1rem; }
+  .skills__header {
+    font-size: 1.7rem; }
+  .skills__subheader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-right: 0; }
+  .skills__container {
+    padding: 30px 10px;
+    grid-row-gap: 60px; }
+  .skills__section {
+    padding: 0 20px; }
+  .projects {
+    padding: 30px 10px; }
+    .projects__header {
+      font-size: 1.7rem; }
+    .projects__about {
+      font-size: 1.125rem;
+      line-height: 1.7rem; }
+  .repos__item--js {
+    padding: 80px 28px; }
+    .repos__item--js::before {
+      top: 22px; }
+  .repos__link--js {
+    font-weight: 400;
+    font-size: 1rem; }
+  .repos__title--js {
+    font-weight: 500;
+    font-size: 1.25rem; }
+  .repos__description--js {
+    font-size: 1.2rem; } }
+
+@media (max-height: 615px) and (max-width: 305px) {
+  .about__header {
+    line-height: 1.5rem; }
+    .about__header h1 {
+      font-size: 1.7rem; }
+    .about__header h2 {
+      font-size: 1.2rem; }
+  .about__description {
+    margin-bottom: 6px;
+    line-height: 1.7rem; }
+    .about__description--bigger {
+      font-size: 1.2rem;
+      margin: 20px 0 0; }
+  .about__email {
+    font-size: 1.1rem; } }
 
 /*# sourceMappingURL=main.css.map */
