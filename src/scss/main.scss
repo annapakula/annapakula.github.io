@@ -1,6 +1,5 @@
 @import "_normalize";
 @import "_variables";
-@import "media-queries"
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,500,600&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
 
@@ -49,12 +48,11 @@ h1, h2, h3 {
   color: #FFF;
   width: 100%;
   height: 100vh;
-  padding: 148px 126px 10px;
-  // padding-top: 148px;
+  padding: 110px 126px 0px;
   &::after {
     content: "";
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: #42302280;
     position: absolute;
     left: 0;
@@ -65,11 +63,10 @@ h1, h2, h3 {
     @include fontLight;
     position: relative;
     height: 90%;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 1;
   }
   &__box-person {
@@ -432,3 +429,6 @@ h1, h2, h3 {
     }
   } 
 }
+
+
+@import "media-queries";
