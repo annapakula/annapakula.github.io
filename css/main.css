@@ -337,15 +337,23 @@ h1, h2, h3 {
 .about {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  background: url("../assets/img/about-background.jpg") bottom left/cover no-repeat;
+  background: url("../assets/img/about-background.jpg") center left/cover no-repeat;
   grid-area: about;
   color: #FFF;
   width: 100%;
+  min-height: 640px;
   height: 100vh;
-  padding: 110px 126px 0px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 126px; }
   .about::after {
     content: "";
     width: 100%;
+    min-height: 640px;
     height: 100vh;
     background: #42302280;
     position: absolute;
@@ -358,7 +366,8 @@ h1, h2, h3 {
     font-size: 1.375rem;
     line-height: 2rem;
     position: relative;
-    height: 90%;
+    max-height: 75vh;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -374,6 +383,7 @@ h1, h2, h3 {
             justify-content: space-between;
     z-index: 1; }
   .about__box-person {
+    padding-top: 28px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -401,7 +411,8 @@ h1, h2, h3 {
     color: #06C847;
     text-decoration: none;
     position: relative;
-    margin: 0; }
+    margin: 0;
+    padding-bottom: .5rem; }
     .about__email::after {
       position: absolute;
       content: " ";
@@ -409,7 +420,7 @@ h1, h2, h3 {
       height: 1.5px;
       background-color: #06C847;
       left: 0;
-      bottom: -.5rem; }
+      bottom: -3px; }
   .about__person {
     margin-right: 80px;
     margin-bottom: .5rem;
@@ -724,12 +735,17 @@ h1, h2, h3 {
 
 @media (max-width: 964px) {
   .about {
-    padding: 60px 63px 0; }
+    padding-top: 83px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     .about__header h1 {
       font-weight: 400;
-      font-size: 2.8rem; }
+      font-size: 2.8rem;
+      line-height: 3rem; }
     .about__header h2 {
       font-size: 1.5rem;
+      line-height: 1.8rem;
       font-weight: inherit; }
     .about__person {
       margin-top: 20px; }
@@ -783,7 +799,10 @@ h1, h2, h3 {
 
 @media (max-width: 618px) {
   .about {
-    padding: 30px; }
+    padding: 0 30px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     .about__content {
       -webkit-box-align: center;
           -ms-flex-align: center;
@@ -796,9 +815,9 @@ h1, h2, h3 {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
     .about__header {
       line-height: 2.5rem;
       text-align: center; }
@@ -876,7 +895,10 @@ h1, h2, h3 {
 
 @media (max-width: 440px) {
   .about {
-    padding: 20px 8px; }
+    padding: 0 8px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     .about__header {
       line-height: 1.8rem; }
       .about__header h1 {
