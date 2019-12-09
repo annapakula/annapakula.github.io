@@ -5,7 +5,7 @@
   line-height: 2rem;
 }
 
-@media (max-width: 964px){
+@media (max-width: 964px) {
   .about {
     padding-top: 83px;
     align-items: flex-start;
@@ -15,7 +15,6 @@
         font-weight: 400;
         font-size: 2.8rem;
         line-height: 3rem;
-
       }
       h2 {
         font-size: 1.5rem;
@@ -25,27 +24,29 @@
     }
     &__person {
       margin-top: 20px;
-        &-img {
-          border: 4px solid #FFF;
-          border-radius: 50%;
-          width: 100px;
-        }
-        &::after {
-          left: 3px;
-          top: 3px;
-          border: 4px solid $darkBlue;
-          max-width: 86px;
-          max-height: 86px;
-        }
+      &-img {
+        border: 4px solid #fff;
+        border-radius: 50%;
+        width: 100px;
       }
+      &::after {
+        left: 3px;
+        top: 3px;
+        border: 4px solid $darkBlue;
+        max-width: 86px;
+        max-height: 86px;
+      }
+    }
     &__description {
       max-width: 100%;
-  }}
+    }
+  }
   .contact {
     padding: 63px;
     &__paragraph {
       max-width: 100%;
-  }}
+    }
+  }
   .navigation {
     height: 45px;
     &__list {
@@ -72,18 +73,20 @@
       font-size: 1.75rem;
       margin-bottom: 16px;
       width: 100%;
-    }}
+    }
+  }
   .projects {
     padding: 63px;
     &__about {
       max-width: 100%;
-  }}
+    }
+  }
   .repos {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 618px) {
+@media (max-width: 640px) {
   .about {
     padding: 0 30px;
     align-items: flex-start;
@@ -103,7 +106,9 @@
         font-size: 2.5rem;
       }
     }
-    &__person {margin-right: 0;}
+    &__person {
+      margin-right: 0;
+    }
     &__description {
       margin: 0 0 2rem;
       font-size: 1.25rem;
@@ -115,9 +120,92 @@
     }
     &__email {
       font-size: 1.25rem;
-  }}
+    }
+  }
+  .hamburger {
+    position: fixed;
+    margin: 20px 0 0 12px;
+    padding: 0;
+    border: 0;
+    z-index: 10;
+    background: transparent;
+    cursor: pointer;
+    &:focus {
+      & > .hamburger__container {
+        box-shadow: 0 0 2px 2px #51a7e8;
+      }
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $green;
+    }
+    &__bars {
+      position: absolute;
+      height: 4px;
+      width: 25px;
+      background: $darkBlue;
+      border-radius: 2px;
+      transition: transform 0.2s ease-in-out;
+      &:before,
+      &:after {
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 4px;
+        background-color: $darkBlue;
+        border-radius: 2px;
+        content: "";
+      }
+      &:before {
+        top: -8px;
+        transition: top 0.1s 0.2s ease-in, transform 0.2s ease-in-out;
+      }
+      &:after {
+        bottom: -8px;
+        transition: bottom 0.1s 0.2s ease-in, transform 0.2s ease-in-out;
+      }
+    }
+    &--active {
+      .hamburger__bars {
+        transform: rotate(225deg);
+        transition: transform 0.2s 0.1s ease-in-out;
+
+        &:before {
+          top: 0;
+          transition: top 0.1s ease-out;
+        }
+        &:after {
+          bottom: 0;
+          transform: rotate(-90deg);
+          transition: bottom 0.1s ease-out, transform 0.2s 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+  .hamburger,
+  .hamburger__container {
+    &:focus {
+      outline: none;
+    }
+  }
   .navigation {
     display: none;
+  }
+  .change #navigation__bar1 {
+    background: $green;
+    transform: translateX(50px);
+  }
+  #navigation__bar2 {
+    background: $green;
+  }
+  #navigation__bar3 {
+    background: $green;
   }
   .contact {
     &__header {
@@ -166,18 +254,18 @@
     }
   }
   .projects {
-  &__header {
-    font-size: 2rem;
-    line-height: 2rem;
-    text-align: center;
+    &__header {
+      font-size: 2rem;
+      line-height: 2rem;
+      text-align: center;
+    }
+    &__about {
+      text-align: center;
+      line-height: 2rem;
+      color: $darkGrey;
+      margin-bottom: 2rem;
+    }
   }
-  &__about {
-    text-align: center;
-    line-height: 2rem;
-    color: $darkGrey;
-    margin-bottom: 2rem;
-  }
-}
   .repos {
     &__description--js {
       font-size: 1.25rem;
@@ -191,7 +279,7 @@
         top: 32px;
       }
     }
-    &__links--js{
+    &__links--js {
       padding: 10px 32px;
     }
     &__title--js {
@@ -240,7 +328,7 @@
     }
     &__email {
       font-size: 1.1rem;
-     }
+    }
   }
   .skills {
     &__header {
@@ -287,17 +375,19 @@
     &__description--js {
       font-size: 1.2rem;
     }
-
   }
 }
 
-
-@media (max-height: 615px)and(max-width: 305px) {
+@media (max-height: 615px) and(max-width: 305px) {
   .about {
     &__header {
       line-height: 1.5rem;
-      h1 {font-size: 1.7rem;}
-      h2 {font-size: 1.2rem;}
+      h1 {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
     }
     &__description {
       margin-bottom: 6px;
@@ -307,6 +397,8 @@
         margin: 20px 0 0;
       }
     }
-    &__email {font-size: 1.1rem;}
+    &__email {
+      font-size: 1.1rem;
+    }
   }
 }

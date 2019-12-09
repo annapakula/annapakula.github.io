@@ -1,5 +1,11 @@
 "use strict";
 
+const menu = document.querySelector('.hamburger'); 
+
+menu.addEventListener('click', () => { 
+	menu.classList.toggle('hamburger--active'); 
+});
+
 const projectsList = document.querySelector(".repos--js");
 
 fetch("https://api.github.com/users/annamazurek/repos?sort=created")
@@ -7,10 +13,10 @@ fetch("https://api.github.com/users/annamazurek/repos?sort=created")
   .then(response => {
     const repositories = response;
     for(const repo of repositories){
-      if(repo.description == null){
+      if(repo.description === null){
         repo.description = "No description";
       }
-      if(repo.homepage == null || repo.homepage == ""){
+      if(repo.homepage === null || repo.homepage === ""){
         projectsList.innerHTML += `
         <li class="repos__item--js">
         <h3 class="repos__title--js">${repo.name}</h3> 
