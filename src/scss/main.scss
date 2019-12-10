@@ -1,7 +1,7 @@
 @import "_normalize";
 @import "_variables";
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,500,600&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,500,600&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
 
 @mixin fontLight {
   font-weight: 300;
@@ -16,22 +16,32 @@
     transform: translateX(0);
   }
 }
-
+@keyframes slideNav {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   font-family: Poppins, monospace, Arial;
-  color: #171F3F;
-  
+  color: #171f3f;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
@@ -48,13 +58,12 @@ h1, h2, h3 {
     "contact";
 }
 
-
 /* ABOUT */
 
 .about {
   background: url("../assets/img/about-background.svg") center left / cover no-repeat;
   grid-area: about;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   min-height: 770px;
   height: 100vh;
@@ -111,23 +120,23 @@ h1, h2, h3 {
     text-decoration: none;
     position: relative;
     margin: 0;
-    padding-bottom: .5rem;
-      &::after {
-        position: absolute;
-        content: " ";
-        width: 100%;
-        height: 1.5px;
-        background-color: $green;
-        left: 0;
-        bottom: -3px;
-      }
+    padding-bottom: 0.5rem;
+    &::after {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 1.5px;
+      background-color: $green;
+      left: 0;
+      bottom: -3px;
+    }
   }
   &__person {
     margin-right: 80px;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     position: relative;
     &-img {
-      border: 10px solid #FFF;
+      border: 10px solid #fff;
       border-radius: 50%;
     }
     &::after {
@@ -157,13 +166,12 @@ h1, h2, h3 {
   }
 }
 
-
 /* CONTACT */
 
 .contact {
   grid-area: contact;
   background: $darkBlue;
-  color: #FFF;
+  color: #fff;
   padding: 110px;
   &__header {
     font-weight: 500;
@@ -204,24 +212,24 @@ h1, h2, h3 {
     }
   }
   &__email {
-      @include fontLight;
-      color: $green;
-      text-decoration: none;
-      position: relative;
-        &::after {
-          position: absolute;
-          content: "";
-          width: 100%;
-          height: 1.5px;
-          background-color: $green;
-          left: 0;
-          bottom: -.5rem;
-     }
+    @include fontLight;
+    color: $green;
+    text-decoration: none;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1.5px;
+      background-color: $green;
+      left: 0;
+      bottom: -0.5rem;
+    }
   }
 }
 
 /* NAVIGATION */
-.hamburger__container {
+.hamburger {
   display: none;
 }
 .navigation {
@@ -229,23 +237,12 @@ h1, h2, h3 {
   width: 100vw;
   height: 54px;
   background: rgba(8, 22, 78, 0.825);
-  // background: linear-gradient(90deg, rgba(10,38,82,0.86) 0%, rgba(8,22,78,0.86) 10%, rgba(8,22,78,0.8606793059020483) 90%, rgba(10,38,82,0.86) 100%);
   z-index: 2;
-  @keyframes slideNav {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }}
   animation: slideNav 1s ease-in-out;
-  // &__switcher {
-  //   display: none;
 
-  // }
   &__link {
     text-decoration: none;
-    color: #FFF;
+    color: #fff;
     height: 100%;
     width: 100%;
     display: flex;
@@ -259,17 +256,12 @@ h1, h2, h3 {
     height: 100%;
     list-style: none;
     display: flex;
-    // justify-content: center;
-    // align-items: center;
   }
   &__item {
-    // min-width: 100px;
     width: 100%;
-    // height: 100%;
-
     @include fontLight;
     position: relative;
-    transition: background .3s linear;
+    transition: background 0.3s linear;
     &:hover {
       background: darken($color: $green, $amount: 3);
     }
@@ -278,7 +270,7 @@ h1, h2, h3 {
       width: 1px;
       height: 100%;
       left: 0;
-      background: #FFF;
+      background: #fff;
       position: absolute;
     }
     &:hover::after {
@@ -287,7 +279,7 @@ h1, h2, h3 {
       height: 100%;
       right: 0;
       top: 0;
-      background: #FFF;
+      background: #fff;
       position: absolute;
     }
   }
@@ -297,7 +289,7 @@ h1, h2, h3 {
 
 .projects {
   grid-area: projects;
-  background: #F5F7FA;
+  background: #f5f7fa;
   padding: 110px;
   &__header {
     font-weight: 500;
@@ -328,17 +320,17 @@ h1, h2, h3 {
   }
   &__item--js {
     padding: 112px 48px;
-    background: #FFF;
+    background: #fff;
     box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
     border-radius: 8px;
     position: relative;
     &::before {
-      content: url("../assets/img/github-icon-black.svg");   
+      content: url("../assets/img/github-icon-black.svg");
       position: absolute;
       top: 48px;
     }
   }
-  &__links--js{
+  &__links--js {
     background: $lightGrey;
     position: absolute;
     width: 100%;
@@ -374,7 +366,6 @@ h1, h2, h3 {
       background: $grey;
       right: -24px;
       position: absolute;
-
     }
   }
   &__link--github {
@@ -401,7 +392,7 @@ h1, h2, h3 {
 
 .skills {
   grid-area: skills;
-  background: #FFF;
+  background: #fff;
   &__container {
     padding: 110px;
     display: grid;
@@ -415,7 +406,7 @@ h1, h2, h3 {
     border-bottom: 2px solid #cbd2d980;
     padding-bottom: 1rem;
     animation: show 1.2s ease-in-out;
-    }
+  }
   &__section {
     display: flex;
   }
@@ -470,8 +461,7 @@ h1, h2, h3 {
     &--blue::before {
       content: url("../assets/img/check-circle-blue.svg");
     }
-  } 
+  }
 }
-
 
 @import "media-queries.scss";

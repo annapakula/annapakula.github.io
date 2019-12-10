@@ -123,8 +123,9 @@
     }
   }
   .hamburger {
+    display: block;
     position: fixed;
-    margin: 20px 0 0 12px;
+    margin: 14px 0 0 12px;
     padding: 0;
     border: 0;
     z-index: 10;
@@ -151,7 +152,7 @@
       width: 25px;
       background: $darkBlue;
       border-radius: 2px;
-      transition: transform 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out, background 1s ease-in-out;
       &:before,
       &:after {
         display: block;
@@ -164,26 +165,29 @@
       }
       &:before {
         top: -8px;
-        transition: top 0.1s 0.2s ease-in, transform 0.2s ease-in-out;
+        transition: top 0.1s 0.2s ease-in, transform 0.2s ease-in-out, background 1s ease-in-out;
       }
       &:after {
         bottom: -8px;
-        transition: bottom 0.1s 0.2s ease-in, transform 0.2s ease-in-out;
+        transition: bottom 0.1s 0.2s ease-in, transform 0.2s ease-in-out, background 1s ease-in-out;
       }
     }
     &--active {
       .hamburger__bars {
+        background: white;
         transform: rotate(225deg);
-        transition: transform 0.2s 0.1s ease-in-out;
+        transition: transform 0.2s 0.1s ease-in-out, background 1s ease-in-out;
 
         &:before {
+          background: white;
           top: 0;
-          transition: top 0.1s ease-out;
+          transition: top 0.1s ease-out, background 1s ease-in-out;
         }
         &:after {
+          background: white;
           bottom: 0;
           transform: rotate(-90deg);
-          transition: bottom 0.1s ease-out, transform 0.2s 0.2s ease-in-out;
+          transition: bottom 0.1s ease-out, transform 0.2s 0.2s ease-in-out, background 1s ease-in-out;
         }
       }
     }
@@ -195,17 +199,45 @@
     }
   }
   .navigation {
-    display: none;
-  }
-  .change #navigation__bar1 {
     background: $green;
-    transform: translateX(50px);
-  }
-  #navigation__bar2 {
-    background: $green;
-  }
-  #navigation__bar3 {
-    background: $green;
+    opacity: .9;
+    // display: block;
+    max-width: 50vw;
+    min-width: 220px;
+    width: 100%;
+    height: 60vh;
+    border-radius: 0 0 100% 0;
+    left: -120%;
+    transition: left 0.8s ease-in-out;
+    &--active {
+      left: 0;
+      transition: left 0.8s ease-in-out;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 0 65px;
+    }
+    &__item {
+      height: 20%;
+      width: 50%;
+      &:hover {
+        background: transparent;
+      }
+      &:hover::before {
+        background: none;
+      }
+      &:hover::after {
+        background: none;
+      }
+    }
+    &__link {
+      justify-content: flex-start;
+      &:hover {
+        color: $darkBlue;
+        font-weight: 600;
+      }
+    }
   }
   .contact {
     &__header {

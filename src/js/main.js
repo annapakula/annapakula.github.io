@@ -1,9 +1,11 @@
 "use strict";
 
-const menu = document.querySelector('.hamburger'); 
+const menu = document.querySelector('.hamburger');
+const nav = document.querySelector('.navigation');
 
 menu.addEventListener('click', () => { 
-	menu.classList.toggle('hamburger--active'); 
+  menu.classList.toggle('hamburger--active');
+  nav.classList.toggle('navigation--active');
 });
 
 const projectsList = document.querySelector(".repos--js");
