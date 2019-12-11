@@ -13,6 +13,7 @@
   border: none;
   background: rgba(5, 61, 138, 0.891);
   color: white;
+  transition: transform .3s ease-in;
   &:focus {
     transform: scale(1.03);
     transition: transform .3s ease-in;
