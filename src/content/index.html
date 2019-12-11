@@ -130,7 +130,7 @@
 
   <!-- CONTACT -->
   <footer class="contact" id="contact-me">
-    <div class="contac__box">
+    <div class="contact__box">
       <h2 class="contact__header">Contact me</h2>
       <p class="contact__paragraph">I’m open for new opportunities. If you have one for me we should talk!</p>
       <div class="contact__icons">
@@ -143,18 +143,20 @@
             src="assets/img/linkedin-icon.svg" alt="LinkedIn icon" />
         </a>
       </div>
-      <a class="contact__email" href="mailto:anna.mazurek.93@gmail.com">anna.mazurek.93@gmail.com</a>
+      <!-- <a class="contact__email" href="mailto:anna.mazurek.93@gmail.com">anna.mazurek.93@gmail.com</a> -->
     </div>
     <form action="https://formspree.io/xaynkrww" method="POST" class="form">
-      <label>Your email:
-        <input type="text" name="_replyto">
-      </label>
-      <label>
-        Your message:
-        <textarea name="message"></textarea>
-      </label>
+      <!-- <label>Your email: -->
+        <input type="text" name="from" placeholder="Imię" class="form__name">
+        <input type="email" name="reply to" placeholder="Email" maxlength="1000" class="form__email" required>
+      <!-- </label> -->
+      <!-- <label> -->
+        <!-- Your message: -->
+        <textarea name="message" placeholder="Wiadomość" class="form__message" required></textarea>
+      <!-- </label> -->
   <!-- your other form fields go here -->
-      <button type="submit">Send</button>
+      
+      <button type="submit" class="form__submit">Wyślij</button>
     </form>
   </footer>
 
