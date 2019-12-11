@@ -12,7 +12,8 @@
   <meta property="og:description" content="Junior Frontend Developer" />
   <meta property="og:url" content="https://annamazurek.github.io" />
   <!-- full url to the image with http(s) ie. https://annamazurek.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-  <meta property="og:image" content="https://raw.githubusercontent.com/annamazurek/annamazurek.github.io/source/src/assets/img/about-background.svg"/>
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/annamazurek/annamazurek.github.io/source/src/assets/img/about-background.jpg" />
 
   <link rel="icon" type="image/png" href="assets/img/person-icon.png" />
   <link rel="stylesheet" href="css/main.css" />
@@ -21,45 +22,46 @@
 <body>
 
 
-    <!-- NAVIGATION -->
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a class="navigation__link" href="#about-me">About me</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#my-skills">My skills</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#my-projects">Projects</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#contact-me">Contact</a></li>
-      </ul>
-    </nav>
-    <button class="hamburger">
-      <div class="hamburger__container" tabindex="-1">
-        <span class="hamburger__bars"></span>
-      </div>
-    </button>
+  <!-- NAVIGATION -->
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__item"><a class="navigation__link" href="#about-me">About me</a></li>
+      <li class="navigation__item"><a class="navigation__link" href="#my-skills">My skills</a></li>
+      <li class="navigation__item"><a class="navigation__link" href="#my-projects">Projects</a></li>
+      <li class="navigation__item"><a class="navigation__link" href="#contact-me">Contact</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger">
+    <div class="hamburger__container" tabindex="-1">
+      <span class="hamburger__bars"></span>
+    </div>
+  </button>
 
-    <!-- ABOUT -->
-    <section class="about" id="about-me">
-      <div class="about__content">
-        <div class="about__box-person">
-          <div class="about__person">
-            <img class="about__person-img" src="assets/img/person.png" alt="smiling Anna Mazurek." />
-          </div>
-          <div class="about__header">
-            <h1>Anna Mazurek</h1>
-            <h2>Junior Frontend Developer</h2>
-          </div>
+  <!-- ABOUT -->
+  <section class="about" id="about-me">
+    <div class="about__content">
+      <div class="about__box-person">
+        <div class="about__person">
+          <img class="about__person-img" src="assets/img/person.png" alt="smiling Anna Mazurek." />
         </div>
-        <p class="about__description--bigger">Hello!</p>
-        <p class="about__description">
-            I am going to make coding my full-time job. I have learned the basics of programming from courses and currently I am still expanding my knowledge. I like to solve puzzles and learn new things.
-            <br><br>
-            In my free time I read books about personal growth so I could be more self-motivated and organized.
-        </p>
-        <a class="about__email" href="mailto:anna.mazurek.93@gmail.com">anna.mazurek.93@gmail.com</a>
+        <div class="about__header">
+          <h1>Anna Mazurek</h1>
+          <h2>Junior Frontend Developer</h2>
+        </div>
       </div>
-    </section>
+      <p class="about__description--bigger">Hello!</p>
+      <p class="about__description">
+        I am going to make coding my full-time job. I have learned the basics of programming from courses and currently
+        I am still expanding my knowledge. I like to solve puzzles and learn new things.
+        <br><br>
+        In my free time I read books about personal growth so I could be more self-motivated and organized.
+      </p>
+      <a class="about__email" href="mailto:anna.mazurek.93@gmail.com">anna.mazurek.93@gmail.com</a>
+    </div>
+  </section>
 
-    <main class="main">
-      
+  <main class="main">
+
     <!-- SKILLS -->
     <section class="skills" id="my-skills">
 
@@ -135,28 +137,19 @@
       <p class="contact__paragraph">I’m open for new opportunities. If you have one for me we should talk!</p>
       <div class="contact__icons">
         <a class="contact__link" href="https://github.com/annamazurek/" target="_blank">
-          <img class="contact__icons--github"  src="assets/img/github-icon.svg"
-            alt="GitHub icon" />
+          <img class="contact__icons--github" src="assets/img/github-icon.svg" alt="GitHub icon" />
         </a>
         <a class="contact__link" href="https://linkedin.com/in/anna-mazurek-585229171/" target="_blank">
-          <img class="contact__icons--linkedin"
-            src="assets/img/linkedin-icon.svg" alt="LinkedIn icon" />
+          <img class="contact__icons--linkedin" src="assets/img/linkedin-icon.svg" alt="LinkedIn icon" />
         </a>
       </div>
-      <!-- <a class="contact__email" href="mailto:anna.mazurek.93@gmail.com">anna.mazurek.93@gmail.com</a> -->
+      <a class="contact__email" href="mailto:anna.mazurek.93@gmail.com">anna.mazurek.93@gmail.com</a>
     </div>
     <form action="https://formspree.io/xaynkrww" method="POST" class="form">
-      <!-- <label>Your email: -->
-        <input type="text" name="from" placeholder="Imię" class="form__name">
-        <input type="email" name="reply to" placeholder="Email" maxlength="1000" class="form__email" required>
-      <!-- </label> -->
-      <!-- <label> -->
-        <!-- Your message: -->
-        <textarea name="message" placeholder="Wiadomość" class="form__message" required></textarea>
-      <!-- </label> -->
-  <!-- your other form fields go here -->
-      
-      <button type="submit" class="form__submit">Wyślij</button>
+      <input type="text" name="from" placeholder="Name" class="form__name">
+      <input type="email" name="reply to" placeholder="Email" maxlength="1000" class="form__email" required>
+      <textarea name="message" placeholder="Wiadomość" class="form__message" required></textarea>
+      <button type="submit" class="form__submit">Send</button>
     </form>
   </footer>
 

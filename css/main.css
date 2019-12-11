@@ -509,7 +509,7 @@ h3 {
   .contact__link {
     text-decoration: none; }
   .contact__icons {
-    margin-bottom: 48px; }
+    margin-bottom: 24px; }
     .contact__icons--github {
       width: 32px;
       height: 32px;
@@ -524,14 +524,6 @@ h3 {
     color: #17c952;
     text-decoration: none;
     position: relative; }
-    .contact__email::after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 1.5px;
-      background-color: #17c952;
-      left: 0;
-      bottom: -0.5rem; }
 
 .form {
   padding-left: 20px;
@@ -550,7 +542,11 @@ h3 {
     border-radius: 3px;
     border: none;
     background: rgba(5, 61, 138, 0.891);
-    color: white; }
+    color: white;
+    -webkit-transition: -webkit-transform .3s ease-in;
+    transition: -webkit-transform .3s ease-in;
+    transition: transform .3s ease-in;
+    transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
     .form__name:focus {
       -webkit-transform: scale(1.03);
               transform: scale(1.03);
@@ -566,7 +562,11 @@ h3 {
     border-radius: 3px;
     border: none;
     background: rgba(5, 61, 138, 0.891);
-    color: white; }
+    color: white;
+    -webkit-transition: -webkit-transform .3s ease-in;
+    transition: -webkit-transform .3s ease-in;
+    transition: transform .3s ease-in;
+    transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
     .form__email:focus {
       -webkit-transform: scale(1.03);
               transform: scale(1.03);
@@ -583,6 +583,10 @@ h3 {
     border: none;
     background: rgba(5, 61, 138, 0.891);
     color: white;
+    -webkit-transition: -webkit-transform .3s ease-in;
+    transition: -webkit-transform .3s ease-in;
+    transition: transform .3s ease-in;
+    transition: transform .3s ease-in, -webkit-transform .3s ease-in;
     height: 7rem;
     resize: vertical; }
     .form__message:focus {
@@ -601,6 +605,10 @@ h3 {
     border: none;
     background: rgba(5, 61, 138, 0.891);
     color: white;
+    -webkit-transition: -webkit-transform .3s ease-in;
+    transition: -webkit-transform .3s ease-in;
+    transition: transform .3s ease-in;
+    transition: transform .3s ease-in, -webkit-transform .3s ease-in;
     margin: 8px 0 0;
     width: 150px;
     background: #17c952;
@@ -879,9 +887,11 @@ h3 {
             flex-direction: column; }
     .contact__box {
       max-width: 80vw;
-      margin-bottom: 18px; }
+      margin-bottom: 36px; }
     .contact__paragraph {
       max-width: 100%; }
+    .contact__icons {
+      margin-bottom: 12px; }
   .form {
     padding: 0;
     margin: 0 auto;
@@ -1078,8 +1088,6 @@ h3 {
     line-height: 2rem; }
     .contact__header::before {
       width: 50px; }
-  .contact__icons {
-    margin-bottom: 32px; }
   .contact__email {
     font-size: 1.25rem; }
   .main {
