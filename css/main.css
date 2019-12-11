@@ -478,9 +478,14 @@ h3 {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: contact;
+  display: -webkit-box;
+  display: flex;
   background: #08164e;
   color: #fff;
-  padding: 110px; }
+  padding: 110px 110px 50px; }
+  .contact__box {
+    max-width: 50vw;
+    width: 100%; }
   .contact__header {
     font-weight: 500;
     font-size: 2rem;
@@ -499,7 +504,7 @@ h3 {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 2.25rem;
-    max-width: 50%;
+    max-width: 80%;
     margin-bottom: 24px; }
   .contact__link {
     text-decoration: none; }
@@ -527,6 +532,86 @@ h3 {
       background-color: #17c952;
       left: 0;
       bottom: -0.5rem; }
+
+.form {
+  padding-left: 20px;
+  max-width: 50vw;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+  .form__name {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 8px;
+    padding: 14px;
+    border-radius: 3px;
+    border: none;
+    background: rgba(5, 61, 138, 0.891);
+    color: white; }
+    .form__name:focus {
+      -webkit-transform: scale(1.03);
+              transform: scale(1.03);
+      -webkit-transition: -webkit-transform .3s ease-in;
+      transition: -webkit-transform .3s ease-in;
+      transition: transform .3s ease-in;
+      transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
+  .form__email {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 8px;
+    padding: 14px;
+    border-radius: 3px;
+    border: none;
+    background: rgba(5, 61, 138, 0.891);
+    color: white; }
+    .form__email:focus {
+      -webkit-transform: scale(1.03);
+              transform: scale(1.03);
+      -webkit-transition: -webkit-transform .3s ease-in;
+      transition: -webkit-transform .3s ease-in;
+      transition: transform .3s ease-in;
+      transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
+  .form__message {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 8px;
+    padding: 14px;
+    border-radius: 3px;
+    border: none;
+    background: rgba(5, 61, 138, 0.891);
+    color: white;
+    height: 7rem;
+    resize: vertical; }
+    .form__message:focus {
+      -webkit-transform: scale(1.03);
+              transform: scale(1.03);
+      -webkit-transition: -webkit-transform .3s ease-in;
+      transition: -webkit-transform .3s ease-in;
+      transition: transform .3s ease-in;
+      transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
+  .form__submit {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 8px;
+    padding: 14px;
+    border-radius: 3px;
+    border: none;
+    background: rgba(5, 61, 138, 0.891);
+    color: white;
+    margin: 8px 0 0;
+    width: 150px;
+    background: #17c952;
+    align-self: flex-end; }
+    .form__submit:focus {
+      -webkit-transform: scale(1.03);
+              transform: scale(1.03);
+      -webkit-transition: -webkit-transform .3s ease-in;
+      transition: -webkit-transform .3s ease-in;
+      transition: transform .3s ease-in;
+      transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
 
 /* NAVIGATION */
 .hamburger {
@@ -759,6 +844,7 @@ h3 {
     .skills__item--blue::before {
       content: url("../assets/img/check-circle-blue.svg"); }
 
+/* MAX 964px */
 @media (max-width: 964px) {
   .about {
     padding-top: 83px;
@@ -787,9 +873,26 @@ h3 {
     .about__description {
       max-width: 100%; }
   .contact {
-    padding: 63px; }
+    padding: 63px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column; }
+    .contact__box {
+      max-width: 80vw;
+      margin-bottom: 18px; }
     .contact__paragraph {
       max-width: 100%; }
+  .form {
+    padding: 0;
+    margin: 0 auto;
+    min-height: 150px;
+    height: 100%;
+    max-width: 80vw;
+    -webkit-box-align: center;
+            align-items: center; }
+    .form__message {
+      min-height: 200px;
+      height: 100%; }
   .navigation {
     height: 45px; }
     .navigation__list {
@@ -821,6 +924,7 @@ h3 {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr; } }
 
+/* MAX 640px */
 @media (max-width: 640px) {
   .about {
     padding: 0 30px;
@@ -887,7 +991,7 @@ h3 {
       transition: background 1s ease-in-out, -webkit-transform 0.2s ease-in-out;
       transition: transform 0.2s ease-in-out, background 1s ease-in-out;
       transition: transform 0.2s ease-in-out, background 1s ease-in-out, -webkit-transform 0.2s ease-in-out; }
-      .hamburger__bars:before, .hamburger__bars:after {
+      .hamburger__bars::before, .hamburger__bars::after {
         display: block;
         position: absolute;
         width: 25px;
@@ -895,13 +999,13 @@ h3 {
         background-color: #08164e;
         border-radius: 2px;
         content: ""; }
-      .hamburger__bars:before {
+      .hamburger__bars::before {
         top: -8px;
         -webkit-transition: top 0.1s 0.2s ease-in, background 1s ease-in-out, -webkit-transform 0.2s ease-in-out;
         transition: top 0.1s 0.2s ease-in, background 1s ease-in-out, -webkit-transform 0.2s ease-in-out;
         transition: top 0.1s 0.2s ease-in, transform 0.2s ease-in-out, background 1s ease-in-out;
         transition: top 0.1s 0.2s ease-in, transform 0.2s ease-in-out, background 1s ease-in-out, -webkit-transform 0.2s ease-in-out; }
-      .hamburger__bars:after {
+      .hamburger__bars::after {
         bottom: -8px;
         -webkit-transition: bottom 0.1s 0.2s ease-in, background 1s ease-in-out, -webkit-transform 0.2s ease-in-out;
         transition: bottom 0.1s 0.2s ease-in, background 1s ease-in-out, -webkit-transform 0.2s ease-in-out;
@@ -915,12 +1019,12 @@ h3 {
       transition: background 1s ease-in-out, -webkit-transform 0.2s 0.1s ease-in-out;
       transition: transform 0.2s 0.1s ease-in-out, background 1s ease-in-out;
       transition: transform 0.2s 0.1s ease-in-out, background 1s ease-in-out, -webkit-transform 0.2s 0.1s ease-in-out; }
-      .hamburger--active .hamburger__bars:before {
+      .hamburger--active .hamburger__bars::before {
         background: white;
         top: 0;
         -webkit-transition: top 0.1s ease-out, background 1s ease-in-out;
         transition: top 0.1s ease-out, background 1s ease-in-out; }
-      .hamburger--active .hamburger__bars:after {
+      .hamburger--active .hamburger__bars::after {
         background: white;
         bottom: 0;
         -webkit-transform: rotate(-90deg);
@@ -929,12 +1033,11 @@ h3 {
         transition: bottom 0.1s ease-out, background 1s ease-in-out, -webkit-transform 0.2s 0.2s ease-in-out;
         transition: bottom 0.1s ease-out, transform 0.2s 0.2s ease-in-out, background 1s ease-in-out;
         transition: bottom 0.1s ease-out, transform 0.2s 0.2s ease-in-out, background 1s ease-in-out, -webkit-transform 0.2s 0.2s ease-in-out; }
-  .hamburger:focus,
-  .hamburger__container:focus {
+  .hamburger:focus, .hamburger__container:focus {
     outline: none; }
   .navigation {
     background: #17c952;
-    opacity: .9;
+    opacity: 0.9;
     max-width: 50vw;
     min-width: 220px;
     width: 100%;
@@ -1025,6 +1128,7 @@ h3 {
     font-size: 1.25rem;
     line-height: 1.75rem; } }
 
+/* MAX 440px */
 @media (max-width: 440px) {
   .about {
     padding: 0 8px;
@@ -1054,6 +1158,12 @@ h3 {
       margin-top: 14px; }
     .contact__email {
       font-size: 1.1rem; }
+  .form {
+    max-width: 100%; }
+    .form__submit {
+      width: 100px;
+      height: 2rem;
+      padding: 0; }
   .skills__header {
     font-size: 1.7rem; }
   .skills__subheader {
@@ -1085,6 +1195,7 @@ h3 {
   .repos__description--js {
     font-size: 1.2rem; } }
 
+/* To look good on very small screens */
 @media (max-height: 615px) and (max-width: 305px) {
   .about__header {
     line-height: 1.5rem; }
