@@ -170,6 +170,7 @@ h3 {
 
 .contact {
   grid-area: contact;
+  display: flex;
   background: $darkBlue;
   color: #fff;
   padding: 110px;
@@ -193,7 +194,7 @@ h3 {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 2.25rem;
-    max-width: 50%;
+    max-width: 80%;
     margin-bottom: 24px;
   }
   &__link {
@@ -226,6 +227,10 @@ h3 {
       bottom: -0.5rem;
     }
   }
+}
+
+.form {
+  
 }
 
 /* NAVIGATION */
