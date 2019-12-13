@@ -1,7 +1,10 @@
 # Homepage & portfolio
-It's in progress (almost ready, but I want to polish it), you can check present state [here](https://annamazurek.github.io/).
+![](./src/assets/img/about-background.png)
+
+It's in progress (almost ready, but I am polishing it), you can check present state [here](https://annamazurek.github.io/).
 
 ## About the project
+
 
 ## Tools and technologies used in project
 
