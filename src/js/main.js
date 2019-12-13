@@ -3,11 +3,13 @@
 const menu = document.querySelector('.hamburger');
 const nav = document.querySelector('.navigation');
 
+// Hamburger menu - show amd hide (by adding extra class)
 menu.addEventListener('click', () => { 
   menu.classList.toggle('hamburger--active');
   nav.classList.toggle('navigation--active');
 });
 
+// GitHub API - get my repositories info
 const projectsList = document.querySelector(".repos--js");
 
 fetch("https://api.github.com/users/annamazurek/repos?sort=created")
@@ -42,8 +44,7 @@ fetch("https://api.github.com/users/annamazurek/repos?sort=created")
     }
   }
 })
-  // .catch(error);
 
 
-console.log(`Hello! 
-I'm glad you're interested in my code. If you see something I could do better, please write me: anna.mazurek.93@gmail.com`);
+console.log('%cHello!', 'color: lightgreen; font-size: 16px');
+console.log(`I'm glad you're interested in my code. If you see something I could do better, please type me: anna.mazurek.93@gmail.com`);
