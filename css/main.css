@@ -378,16 +378,9 @@ h3 {
   display: flex;
   -webkit-box-align: center;
           align-items: center;
-  padding: 0 126px; }
-  .about::after {
-    content: "";
-    width: 100%;
-    min-height: 770px;
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    top: 0;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.85); }
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 0 100px; }
   .about__content {
     -webkit-animation: show 1.2s ease-in-out;
             animation: show 1.2s ease-in-out;
@@ -395,8 +388,15 @@ h3 {
     font-size: 1.375rem;
     line-height: 2rem;
     position: relative;
-    max-height: 75vh;
-    height: 100%;
+    max-height: 95%;
+    width: 70vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: rgba(8, 8, 10, 0.8);
+    border-radius: 15px;
+    background-origin: padding-box;
+    padding: 50px;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -404,11 +404,9 @@ h3 {
             flex-direction: column;
     -webkit-box-align: start;
             align-items: flex-start;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
+    justify-content: space-around;
     z-index: 1; }
   .about__box-person {
-    padding-top: 28px;
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;
@@ -440,10 +438,10 @@ h3 {
       position: absolute;
       content: " ";
       width: 100%;
-      height: 1.5px;
+      height: 1.2px;
       background-color: #17c952;
       left: 0;
-      bottom: -3px; }
+      bottom: 4px; }
   .about__person {
     margin-right: 80px;
     margin-bottom: 0.5rem;
@@ -466,8 +464,7 @@ h3 {
       max-height: 121px;
       height: 100%; }
   .about__description {
-    margin: 0 0 1rem;
-    max-width: 70%; }
+    margin: 0 0 1rem; }
     .about__description--bigger {
       font-size: 2rem;
       line-height: 3rem;
@@ -942,7 +939,9 @@ h3 {
             align-items: flex-start; }
     .about__content {
       -webkit-box-align: center;
-              align-items: center; }
+              align-items: center;
+      padding: 0;
+      background: none; }
     .about__box-person {
       display: -webkit-box;
       display: flex;
