@@ -31,7 +31,7 @@
       <li class="navigation__item"><a class="navigation__link" href="#contact-me">Contact</a></li>
     </ul>
   </nav>
-  <button class="hamburger">
+  <button class="hamburger" aria-label="Show Menu">
     <div class="hamburger__container" tabindex="-1">
       <span class="hamburger__bars"></span>
     </div>
@@ -146,9 +146,9 @@
       <a class="contact__email" href="mailto:anna.mazurek.93@gmail.com">anna.mazurek.93@gmail.com</a>
     </div>
     <form action="https://formspree.io/xaynkrww" method="POST" class="form">
-      <input type="text" name="from" placeholder="Name" class="form__name">
-      <input type="email" name="reply to" placeholder="Email" maxlength="1000" class="form__email" required>
-      <textarea name="message" placeholder="Message" class="form__message" required></textarea>
+      <input type="text" id="name" name="from" placeholder="Name" class="form__name" aria-label="Your Name">
+      <input type="email" id="email" name="reply to" placeholder="Email" maxlength="1000" class="form__email" aria-label="Your Email" required>
+      <textarea name="message" id="message" placeholder="Message" class="form__message" aria-label="Your Message" required></textarea>
       <button type="submit" class="form__submit">Send</button>
     </form>
   </footer>
