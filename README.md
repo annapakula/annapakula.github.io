@@ -1,7 +1,5 @@
 # Homepage & portfolio
 ![](./src/assets/img/about-background.png)
-
-It's in progress (almost ready, but I am polishing it), you can check present state [here](https://annamazurek.github.io/).
  
 ## About the project:
 This website was created as a final project of **WTF - What This Frontend** course.
