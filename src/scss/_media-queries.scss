@@ -120,6 +120,8 @@
     align-items: flex-start;
     &__content {
       align-items: center;
+      padding: 0;
+      background: none;
     }
     &__box-person {
       display: flex;
