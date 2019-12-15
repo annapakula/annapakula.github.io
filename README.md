@@ -2,21 +2,43 @@
 ![](./src/assets/img/about-background.png)
 
 It's in progress (almost ready, but I am polishing it), you can check present state [here](https://annamazurek.github.io/).
+ 
+## About the project:
+This website was created as a final project of **WTF - What This Frontend** course.
+The aim was to create a portfolio based on recived Figma project - but changed to make it slightly different from anothers trainees websites.
 
-## About the project
-
-
-## Tools and technologies used in project
+## Tools and technologies used in the project:
+- Semantic HTML5
+- CSS
+  - flexbox
+  - grid
+  - transitions
+  - media queries
+  - RWD
+- BEM - Block Element Modifier.
+- JavaScript - ES6
+  - Fetch API
+  - DOM manipulations
+- Sass (SCSS)
+- Node.js / NPM
+- Gulp.js
+- Git
+- Visual Studio Code
+- Figma (layout design)
 
 ## To run the website locally:
 
+You need Node.js (if you don't have it installed, you can download it [here](https://nodejs.org/en/)).
 
-## Project contain wtf-gulp-starter-pack
-###If you want to run it local:
-npm install -g gulp-cli
+### Type in your command line:
 
-npm install
+`npm install -g gulp-cli` -> install Gulp globally (you may need to open a terminal as an administrator)
 
-gulp
+### Go to main folder of project and type:
 
-To publish your page using github pages use npm run deploy
+`npm install` -> command executed only once in a project
+
+`gulp` -> start task runner
+
+To publish your page using github pages use `npm run deploy`.
+
