@@ -718,10 +718,10 @@ h3 {
     box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
     border-radius: 8px;
     position: relative; }
-    .repos__item--js::before {
-      content: url("../assets/img/github-icon-black.svg");
-      position: absolute;
-      top: 48px; }
+  .repos__language {
+    position: absolute;
+    top: 48px;
+    height: 42px; }
   .repos__links--js {
     background: #F5F7FA;
     position: absolute;
@@ -1042,7 +1042,8 @@ h3 {
         transition: bottom 0.1s ease-out, background 1s ease-in-out, -webkit-transform 0.2s 0.2s ease-in-out;
         transition: bottom 0.1s ease-out, transform 0.2s 0.2s ease-in-out, background 1s ease-in-out;
         transition: bottom 0.1s ease-out, transform 0.2s 0.2s ease-in-out, background 1s ease-in-out, -webkit-transform 0.2s 0.2s ease-in-out; }
-  .hamburger:focus, .hamburger__container:focus {
+  .hamburger:focus,
+  .hamburger__container:focus {
     outline: none; }
   .navigation {
     background: #17c952;
@@ -1125,10 +1126,10 @@ h3 {
     line-height: 1.75rem; }
   .repos__item--js {
     padding: 88px 32px; }
-    .repos__item--js::before {
-      width: 40px;
-      height: 40px;
-      top: 32px; }
+  .repos__language {
+    width: 40px;
+    height: 40px;
+    top: 32px; }
   .repos__links--js {
     padding: 10px 32px; }
   .repos__title--js {
@@ -1194,8 +1195,8 @@ h3 {
       line-height: 1.7rem; }
   .repos__item--js {
     padding: 80px 28px; }
-    .repos__item--js::before {
-      top: 22px; }
+  .repos__language {
+    top: 22px; }
   .repos__link--js {
     font-weight: 400;
     font-size: 1rem; }
