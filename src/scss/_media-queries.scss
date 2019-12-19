@@ -185,7 +185,8 @@
       background: $darkBlue;
       border-radius: 2px;
       transition: transform 0.2s ease-in-out, background 1s ease-in-out;
-      &::before, &::after {
+      &::before,
+      &::after {
         display: block;
         position: absolute;
         width: 25px;
@@ -225,7 +226,8 @@
     }
   }
 
-  .hamburger, .hamburger__container {
+  .hamburger,
+  .hamburger__container {
     &:focus {
       outline: none;
     }
@@ -341,12 +343,13 @@
     }
     &__item--js {
       padding: 88px 32px;
-      &::before {
-        width: 40px;
-        height: 40px;
-        top: 32px;
-      }
     }
+    &__language {
+      width: 40px;
+      height: 40px;
+      top: 32px;
+    }
+
     &__links--js {
       padding: 10px 32px;
     }
@@ -444,10 +447,11 @@
   .repos {
     &__item--js {
       padding: 80px 28px;
-      &::before {
-        top: 22px;
-      }
     }
+    &__language {
+      top: 22px;
+    }
+
     &__link--js {
       font-weight: 400;
       font-size: 1rem;

@@ -74,13 +74,10 @@ h3 {
     max-height: 95%;
     width: 70vw;
     height: fit-content;
-    // height: 100%;
     background-color: rgba(8, 8, 10, 0.8);
     border-radius: 15px;
-    // border: 20px solid black;
     background-origin: padding-box;
     padding: 50px;
-    // background-position: 50px 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -88,7 +85,6 @@ h3 {
     z-index: 1;
   }
   &__box-person {
-    // padding-top: 28px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,7 +147,6 @@ h3 {
   }
   &__description {
     margin: 0 0 1rem;
-    // max-width: 90%;
     &--bigger {
       font-size: 2rem;
       line-height: 3rem;
@@ -245,6 +240,7 @@ h3 {
 }
 
 /* NAVIGATION */
+
 .hamburger {
   display: none;
 }
@@ -340,11 +336,11 @@ h3 {
     box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
     border-radius: 8px;
     position: relative;
-    &::before {
-      content: url("../assets/img/github-icon-black.svg");
-      position: absolute;
-      top: 48px;
-    }
+  }
+  &__language{
+    position: absolute;
+    top: 48px;
+    height: 42px;
   }
   &__links--js {
     background: $lightGrey;
