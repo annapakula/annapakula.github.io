@@ -18,7 +18,6 @@ fetch("https://api.github.com/users/annamazurek/repos?sort=created")
     const repositories = response;
     for (const repo of repositories) {
       let language = String(repo.language).toLowerCase();
-      console.log(language);
       if (language == "null") {
         language = "github-icon-black";
       }
