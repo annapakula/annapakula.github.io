@@ -12,7 +12,7 @@ menu.addEventListener('click', () => {
 // GitHub API - get my repositories info
 const projectsList = document.querySelector(".repos--js");
 
-fetch("https://api.github.com/users/annamazurek/repos?sort=created")
+fetch("https://api.github.com/users/annapakula/repos?sort=created")
   .then(response => response.json())
   .then(response => {
     const repositories = response;
@@ -55,4 +55,4 @@ fetch("https://api.github.com/users/annamazurek/repos?sort=created")
 
 
 console.log('%cHello!', 'color: lightgreen; font-size: 16px');
-console.log(`I'm glad you're interested in my code. If you see something I could do better, please type me: anna.mazurek.93@gmail.com`);
+console.log(`I'm glad you're interested in my code. If you see something I could do better, please type me: anna.pakula.321@gmail.com`);
