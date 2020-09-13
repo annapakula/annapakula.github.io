@@ -627,6 +627,8 @@ h3 {
   width: 100vw;
   height: 54px;
   background: rgba(8, 22, 78, 0.825);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   z-index: 2;
   -webkit-animation: slideNav 1s ease-in-out;
           animation: slideNav 1s ease-in-out; }
