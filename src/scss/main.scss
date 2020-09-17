@@ -249,6 +249,7 @@ h3 {
   width: 100vw;
   height: 54px;
   background: rgba(8, 22, 78, 0.825);
+  backdrop-filter: blur(4px);
   z-index: 2;
   animation: slideNav 1s ease-in-out;
 
