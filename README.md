@@ -37,6 +37,3 @@ You need Node.js (if you don't have it installed, you can download it [here](htt
 `npm install` -> command executed only once in a project
 
 `gulp` -> start task runner
-
-To publish your page using github pages use `npm run deploy`.
-
